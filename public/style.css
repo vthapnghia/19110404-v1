@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(to bottom right, #BEEBF1, #FA3CCC);
+    height: 100vh;
+    overflow: hidden;
+    font-family: monospace;
+}
+
+#root{
+    width: 100%;
+    height: 100%;
+}
+
+#root::before{
+    position: absolute;
+    bottom: 50%;
+    left: 80%;
+    width: 600px;
+    height: 600px;
+    content: "";
+    background-image: linear-gradient(to top right, #b1baf5, #c2adf3);
+    border-radius: 50%;
+    z-index: -1;
+    animation: backgroundanimation 6s ease-in-out 2s infinite alternate;
+}
+
+#root::after{
+    position: absolute;
+    top: 50%;
+    right: 60%;
+    width: 400px;
+    height: 400px;
+    content: "";
+    background-image: linear-gradient(to top right, #b1baf5, #c2adf3);
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(10px);
+    animation: backgroundanimation 5s ease-in-out infinite alternate;
+}
+
+
+@keyframes backgroundanimation {
+    from {
+      transform: translate(0, 0);
+    }
+    to {
+      transform: translate(0, 100px);
+    }
+  }
+  
