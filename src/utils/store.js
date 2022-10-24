@@ -3,7 +3,12 @@ import React, { useState } from "react";
 export const StoreContext = React.createContext(null);
 
 const posts = [
-  { id: "adadda", title: "Thảo luận về key prop trong map()", content: "Đây là nội dung" },
+  {
+    id: "adadda",
+    title: "Thảo luận về key prop trong map()",
+    content:
+      "Anh Nhật Hoàng Codeaholiguy, còn được gọi tận thương là Hoàng Hô.  Không chỉ là một bờ lốc gơ, anh còn là diễn giả kiêm streamer được mến mộ (Điểm hình là live stream hướng dẫn Git & Github với gần 20k view và hàng nghìn like từ nhiều trang). Hãy cùng lắng nghe những chia sẻ về con đường trở thành FullStack Developer cùng những điều hay ho khi làm việc tại công ty startup từ anh Hoàng nhé!",
+  },
 ];
 
 const comments = [

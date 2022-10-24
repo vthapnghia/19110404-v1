@@ -22,6 +22,13 @@ export default function Home() {
   return (
     <div className="home">
       <h1 className="title home-title">Home</h1>
+      {listPost.length > 0 && (
+        <div style={{ display: "flex", padding: "10px" }}>
+          <h3 style={{ width: "30%" }}>Tiêu đề</h3>
+          <h3 style={{ width: "50%" }}>Nội dung</h3>
+          <h3>Thao tác</h3>
+        </div>
+      )}
       <div className="content home-content">
         {listPost.length > 0 ? (
           listPost.map((item, index) => {
@@ -31,7 +38,7 @@ export default function Home() {
                 key={index}
                 handleRemove={removePost}
                 handleEdit={handleEdit}
-                onClick={handleOnClick}
+                handleOnClick={handleOnClick}
               />
             );
           })

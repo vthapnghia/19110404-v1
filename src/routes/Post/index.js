@@ -38,7 +38,7 @@ export default function Post(props) {
       <h1 className="title post-title">Bài viết</h1>
       <div className="content post-content">
         <h3>{post?.title}</h3>
-        <p>{post?.content}</p>
+        <p style={{padding: '10px 32px'}}>{post?.content}</p>
       </div>
       <div className="new-comment">
         <div className="group group-textarea">
@@ -58,7 +58,9 @@ export default function Post(props) {
       </div>
       <div className="post-comment">
         {comments.map((element, index) => {
-          return <p key={index}>{element.content}</p>;
+          return <>
+            <p key={index} styl={{display: 'block', padding: '10px'}}>{element.content}</p>
+          </>;
         })}
       </div>
     </div>
